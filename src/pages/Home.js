@@ -11,7 +11,7 @@ class Home extends Component {
     state = {
         Employees: [],
         filteredEmployees: [],
-        sortDirection: "asc",
+        sortOrder: "asc",
         search: "",
         error: ""
     }
@@ -29,7 +29,7 @@ class Home extends Component {
     handleInputChange = e => {
         console.log(e.target.value);
         console.log(this.state.search);
-        if(e.target.value === "") {
+        if (e.target.value === "") {
             this.setState({ filteredEmployees: this.state.Employees })
         } else {
             this.setState({ search: e.target.value }, () => {
@@ -41,7 +41,7 @@ class Home extends Component {
     findEmployee = e => {
         let emp;
         let name = this.state.search;
-        emp = this.state.Employees.filter(function(employee) {
+        emp = this.state.Employees.filter(function (employee) {
             console.log(employee.name.first);
             console.log(name);
             name = name.toLowerCase();
@@ -52,8 +52,32 @@ class Home extends Component {
     }
 
     sortName = () => {
+        let nameOrder;
+        let order;
+        if (this.state.sortOrder === "asc") {
+            nameOrder = this.state.Employees.sort((a, b) =>
+                a.name.last > b.name.last ? 1 : -1
+            );
+            order = "dsc";
+        } else {
+            nameOrder = this.state.Employees.sort((a,b) => 
+            a.name.last < b.name.last ? 1 : -1
+            );
+            order = "asc";
+        }
+        this.setState({ Employees: nameOrder, sortOrder: order })
+        }
 
+        render() {
+            return (
+                <div>
+                    <Container style={{ minHeight: "80%"}}>
+
+                    </Container>
+                </div>
+            )
+        }
     }
-}
 
-export default Home;
+
+    export default Home;
