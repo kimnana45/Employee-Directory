@@ -52,8 +52,7 @@ class Home extends Component {
     }
 
     sortName = () => {
-        
+
     }
 }
 
-export default Home;
