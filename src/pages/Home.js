@@ -73,7 +73,9 @@ class Home extends Component {
                 <div>
                     <Container style={{ minHeight: "80%"}}>
                     <Row>
+                        <Searchbar 
                         
+                        />
                     </Row>
                     </Container>
                 </div>
