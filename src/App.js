@@ -1,11 +1,16 @@
 import React from 'react';
-import Header from "../src/components/Header";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
+import Searchbar from "./components/Searchbar";
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-       <Header />
+      <Wrapper>
+        <Header />
+        <Searchbar />
+      </Wrapper>
     </div>
   );
 }
