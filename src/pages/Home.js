@@ -79,6 +79,44 @@ class Home extends Component {
                         Employees = {this.state.Employees}
                         />
                     </Row>
+                    <Row>
+                        <Col size="sm-2">
+                            <h4>Picture</h4>
+                            <hr></hr>
+                        </Col>
+                        <Col size="sm-2">
+                            <h4>
+                                Name{" "}
+                                <button onClikc={this.sortName}>
+                                <i className="fas fa-sort fa-sx"/>
+                                </button>
+                            </h4>
+                        </Col>
+                        <Col size="sm-2">
+                            <h4>Phone Number</h4>
+                            <hr></hr>
+                        </Col>
+                        <Col size="sm-3">
+                            <h4>Email</h4>
+                            <hr></hr>
+                        </Col>
+                        <Col size="sm-2">
+                            <h4>DOB</h4>
+                            <hr></hr>
+                        </Col>
+                    </Row>
+                    {this.state.filteredEmployees.map((thisEmp, index) => {
+                        return (
+                            <Row key={index}>
+                                <Col size="sm-2">
+                                    <img src={thisEmp.picture.medium}
+                                    alt="employee-picture"
+                                    />
+                                </Col>
+
+                            </Row>
+                        )
+                    })}
                     </Container>
                 </div>
             )
