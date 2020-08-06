@@ -72,7 +72,9 @@ class Home extends Component {
             return (
                 <div>
                     <Container style={{ minHeight: "80%"}}>
-
+                    <Row>
+                        
+                    </Row>
                     </Container>
                 </div>
             )
