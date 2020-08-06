@@ -1,17 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
-import Searchbar from "./components/Searchbar";
-import './App.css';
+
 
 function App() {
   return (
-    <div className="app">
-      <Wrapper>
-        <Header />
-        <Searchbar />
-      </Wrapper>
-    </div>
+    <Router>
+      <div>
+        <Wrapper>
+          <Header />
+          <Route exact path="/" component={Home} />
+        </Wrapper>
+      </div>
+    </Router>
   );
 }
 
