@@ -74,7 +74,9 @@ class Home extends Component {
                     <Container style={{ minHeight: "80%"}}>
                     <Row>
                         <Searchbar 
-                        
+                        findEmployee = {this.findEmployee}
+                        handleInputChange = {this.handleInputChange}
+                        Employees = {this.state.Employees}
                         />
                     </Row>
                     </Container>
