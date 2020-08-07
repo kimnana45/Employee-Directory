@@ -117,7 +117,7 @@ class Home extends Component {
                                     {thisEmp.phone}
                                 </Col>
                                 <Col size="sm-3">
-                                    <Link to={"/"}>{thisEmp.email}</Link>
+                                    {thisEmp.email}
                                 </Col>
                                 <Col size="sm-2">
                                     {moment(thisEmp.dob.date.split("T")[0], "YYY-MM-DD").format("l")}
