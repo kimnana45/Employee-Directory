@@ -4,7 +4,7 @@ import "./style.css";
 function Searchbar(props) {
     const { search, handleInputChange, findEmployee } = props;
     return (
-        <form className="search">
+        <form className="search form-inline">
             <div className="form-group">
                 <h2>Search</h2>
                 <input

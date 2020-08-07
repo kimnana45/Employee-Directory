@@ -41,8 +41,6 @@ class Home extends Component {
         let emp;
         let name = this.state.search;
         emp = this.state.Employees.filter(function (employee) {
-            console.log(employee.name.first);
-            console.log(name);
             name = name.toLowerCase();
             name = name.charAt(0).toUpperCase() + name.slice(1);
             return name === employee.name.first;
@@ -91,7 +89,7 @@ class Home extends Component {
                                 </button>
                             </h4>
                         </Col>
-                        <Col size="sm-2">
+                        <Col size="sm-3">
                             <h4>Phone Number</h4>
                             <hr></hr>
                         </Col>
