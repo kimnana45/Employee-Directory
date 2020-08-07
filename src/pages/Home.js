@@ -5,7 +5,6 @@ import Row from "../components/Row"
 import Col from "../components/Col"
 import Searchbar from "../components/Searchbar"
 import moment from "moment";
-import { Link } from "react-router-dom";
 
 class Home extends Component {
     state = {
