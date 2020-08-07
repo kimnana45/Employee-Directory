@@ -18,7 +18,6 @@ class Home extends Component {
 
     componentDidMount() {
         API.getEmployees().then(employees => {
-            console.log(employees);
             this.setState({
                 Employees: employees.data.results,
                 filteredEmployees: employees.data.results
@@ -60,23 +59,23 @@ class Home extends Component {
             );
             order = "dsc";
         } else {
-            nameOrder = this.state.Employees.sort((a,b) => 
-            a.name.last < b.name.last ? 1 : -1
+            nameOrder = this.state.Employees.sort((a, b) =>
+                a.name.last < b.name.last ? 1 : -1
             );
             order = "asc";
         }
         this.setState({ Employees: nameOrder, sortOrder: order })
-        }
+    }
 
-        render() {
-            return (
-                <div>
-                    <Container style={{ minHeight: "80%"}}>
+    render() {
+        return (
+            <div>
+                <Container style={{ minHeight: "80%" }}>
                     <Row>
-                        <Searchbar 
-                        findEmployee = {this.findEmployee}
-                        handleInputChange = {this.handleInputChange}
-                        Employees = {this.state.Employees}
+                        <Searchbar
+                            findEmployee={this.findEmployee}
+                            handleInputChange={this.handleInputChange}
+                            Employees={this.state.Employees}
                         />
                     </Row>
                     <Row>
@@ -88,7 +87,7 @@ class Home extends Component {
                             <h4>
                                 Name{" "}
                                 <button onClikc={this.sortName}>
-                                <i className="fas fa-sort fa-sx"/>
+                                    <i className="fas fa-sort fa-sx" />
                                 </button>
                             </h4>
                         </Col>
@@ -110,18 +109,28 @@ class Home extends Component {
                             <Row key={index}>
                                 <Col size="sm-2">
                                     <img src={thisEmp.picture.medium}
-                                    alt="employee-picture"
+                                        alt="employee-picture"
                                     />
                                 </Col>
-
+                                <Col size="sm-2">
+                                    {thisEmp.name.last}, {thisEmp.name.first}
+                                </Col>
+                                <Col size="sm-2">
+                                    {thisEmp.phone}
+                                </Col>
+                                <Col size="sm-3">
+                                    <Link to={"/"}>{thisEmp.email}</Link>
+                                </Col>
+                                <Col size="sm-2">
+                                    {moment(thisEmp.dob.date.split("T")[0], "YYY-MM-DD").format("l")}
+                                </Col>
                             </Row>
                         )
                     })}
-                    </Container>
-                </div>
-            )
-        }
+                </Container>
+            </div>
+        )
     }
+}
 
-
-    export default Home;
+export default Home;
