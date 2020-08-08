@@ -84,9 +84,10 @@ class Home extends Component {
                             <h4>
                                 Name{" "}
                                 <button onClikc={this.sortName}>
-                                    <i className="fas fa-sort fa-sx" />
+                                    <i className="fas fa-sort-alpha-up-alt" />
                                 </button>
                             </h4>
+                            <hr></hr>
                         </Col>
                         <Col size="sm-3">
                             <h4>Phone Number</h4>
