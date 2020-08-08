@@ -82,7 +82,7 @@ class Home extends Component {
                         <Col size="sm-2">
                             <h4>
                                 Name{" "}
-                                <button onClikc={this.sortName}>
+                                <button onClick={this.sortName}>
                                     <i className="fas fa-sort-alpha-up-alt" />
                                 </button>
                             </h4>
