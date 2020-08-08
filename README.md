@@ -16,3 +16,4 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 <img src="demo/ED.png">
 
 ## Deployment
+https://kimnana45.github.io/Employee-Directory/
