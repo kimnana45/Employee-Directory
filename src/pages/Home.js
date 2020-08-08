@@ -94,7 +94,7 @@ class Home extends Component {
                             <h4>Email</h4>
                         </Col>
                         <Col size="sm-2">
-                            <h4>Date of Birth</h4>
+                            <h4>DOB</h4>
                         </Col>
                     </Row>
                     {this.state.filteredEmployees.map((thisEmp, index) => {
