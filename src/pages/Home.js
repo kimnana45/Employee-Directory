@@ -77,7 +77,7 @@ class Home extends Component {
                     </Row>
                     <Row>
                         <Col size="sm-2">
-                            <h4>Picture</h4>                     
+                            <h4>Picture</h4>
                         </Col>
                         <Col size="sm-2">
                             <h4>
@@ -86,18 +86,15 @@ class Home extends Component {
                                     <i className="fas fa-sort-alpha-up-alt" />
                                 </button>
                             </h4>
-                          
                         </Col>
                         <Col size="sm-3">
                             <h4>Phone Number</h4>
-                            
                         </Col>
                         <Col size="sm-3">
                             <h4>Email</h4>
-                           
                         </Col>
                         <Col size="sm-2">
-                            <h4>Date of Birth</h4>                            
+                            <h4>Date of Birth</h4>
                         </Col>
                     </Row>
                     {this.state.filteredEmployees.map((thisEmp, index) => {
